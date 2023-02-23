@@ -1,9 +1,30 @@
-from rest_framework import views, viewsets, permissions
+from django.shortcuts import render
+from rest_framework import views, viewsets, permissions, generics
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from django.http import JsonResponse
 from django.contrib.auth.models import User, Group
 from .models import *
 from fashionStore.serializers import *
-from django.views.decorators.csrf import csrf_exempt
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RegisterSerializer
+
+    @api_view(['GET'])
+    def getRoutes(request):
+        routes = [
+            '/api/token/',
+            '/api/register/',
+            '/api/token/refresh/'
+        ]
+        return Response(routes)
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -60,7 +81,6 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
-    #@csrf_exempt
     def post(self, request):
         print("request: ", request)
         return Response({'success': True, 'message': 'this is the ORDER post/response message.'})
@@ -69,18 +89,5 @@ class OrderViewSet(viewsets.ModelViewSet):
 
 '''
     
-shipping_name = request.data.get('name')
-shipping_address = request.data.get('address')
-shipping_city = request.data.get('city')
-shipping_state = request.data.get('state')
-shipping_zip = request.data.get('zip')
-payment_method = request.data.get('paymentMethod')
-
-
-print("request: ", shipping_name, shipping_address)
-return Response({'success': True, 'message': 'this is the ORDER post/response message.'})
-        
-        
-
         
 '''
