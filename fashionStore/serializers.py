@@ -70,15 +70,17 @@ class SizeSerializer(serializers.ModelSerializer):
         model = Size
         fields = ['size']
 
+class ColorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Color
+        fields = ['color']
+
 class ProductSerializer(serializers.ModelSerializer):
-    size = serializers.SlugRelatedField(
-        many=True,
-        read_only=True,
-        slug_field='size'
-    )
+    size = serializers.SlugRelatedField(many=True, read_only=True, slug_field='size')
+    color = serializers.SlugRelatedField(many=True, read_only=True, slug_field='color')
     class Meta:
         model = Product
-        fields = ['id', 'size', 'name', 'description', 'brand', 'category',
+        fields = ['id', 'size', 'color','name', 'description', 'brand', 'category',
                   'price', 'image', 'date', 'sale', 'size', 'tag', 'percent']
 
 class OrderSerializer(serializers.ModelSerializer):

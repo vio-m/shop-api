@@ -41,6 +41,10 @@ class SizeViewSet(viewsets.ModelViewSet):
     queryset = Size.objects.values_list('id', 'size')
     serializer_class = SizeSerializer
 
+class ColorViewSet(viewsets.ModelViewSet):
+    queryset = Color.objects.values_list('id', 'color')
+    serializer_class = ColorSerializer
+
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.prefetch_related('size').all() #objects.all()
     serializer_class = ProductSerializer

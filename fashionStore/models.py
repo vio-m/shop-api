@@ -20,23 +20,25 @@ class Subscription(models.Model):
         ordering = ['id']
 
 class Brand(models.Model):
-    name = models.CharField(max_length=200)
-    image = models.ImageField(blank=True, default="default_picture.jpg")
+    brand = models.CharField(max_length=200, null=True, blank=True)
+    image = models.URLField(blank=True)
+    image_secondary = models.URLField(blank=True)
     favorite = models.BooleanField(default=False)
     description = models.TextField()
 
     def __str__(self):
-        return f"Brand: {self.name}"
+        return f"Brand: {self.brand}"
 
     class Meta:
         ordering = ['id']
 
 class Category(models.Model):
-    name = models.CharField(max_length=200, null=True)
-    image = models.ImageField(blank=True, default="default_picture.jpg")
+    category = models.CharField(max_length=200, null=True, blank=True)
+    image = models.URLField(blank=True)
+    image_secondary = models.URLField(blank=True)
     description = models.TextField()
     def __str__(self):
-        return f"Category: {self.name}"
+        return f"Category: {self.category}"
     class Meta:
         ordering = ['id']
 
@@ -51,16 +53,30 @@ class Size(models.Model):
     def __str__(self):
         return f"Size: {self.size}"
 
+class Color(models.Model):
+    COLOR_CHOICES = (
+        ('WHITE', 'white'),
+        ('TAN', 'tan'),
+        ('RED', 'red'),
+        ('BROWN', 'brown'),
+        ('BLACK', 'black'),
+    )
+    color = models.CharField(max_length=5, choices=COLOR_CHOICES)
+    def __str__(self):
+        return f"Color: {self.color}"
+
 class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
-    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    price = models.FloatField() #models.PositiveIntegerField()
-    image = models.ImageField(blank=True, default="default_picture.jpg")
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, default=0)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=0)
+    price = models.FloatField()
+    image = models.URLField(blank=True)
+    image_secondary = models.URLField(blank=True)
     date = models.DateTimeField(auto_now=True, blank=False)
     sale = models.BooleanField(default=False)
-    size = models.ManyToManyField(Size, blank=True) #models.ForeignKey(Size, on_delete=models.SET_NULL, null=True)
+    size = models.ManyToManyField(Size, blank=True)
+    color = models.ManyToManyField(Color, blank=True)
     tag = models.CharField(max_length=100, blank=True)
     percent = models.CharField(max_length=100, blank=True)
 
