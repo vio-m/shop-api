@@ -5,3 +5,4 @@ static/
 settings.py
 vercel.json
 db.sqlite3
+req.txt
