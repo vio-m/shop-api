@@ -1,0 +1,6 @@
+pip~=20.0.2
+keyring~=18.0.1
+setuptools~=45.2.0
+Django~=4.0.5
+djangorestframework~=3.14.0
+python-dotenv~=0.21.1

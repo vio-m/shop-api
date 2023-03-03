@@ -1,6 +1,7 @@
 from django.db import models
 from multiselectfield import MultiSelectField
 from django.contrib.auth.models import User
+from django.utils.crypto import get_random_string
 
 
 class Customer(models.Model):
@@ -86,6 +87,9 @@ class Product(models.Model):
     class Meta:
         ordering = ['id']
 
+def generate_transaction_id():
+    unique_id = get_random_string(length=10)
+    return unique_id
 
 class Order(models.Model):
     STATUS_CHOICES = (('PENDING', 'Pending'), ('PROCESSING', 'Processing'), ('SHIPPED', 'Shipped'),
@@ -102,7 +106,7 @@ class Order(models.Model):
     ordered_item = models.CharField(max_length=200, blank=True)
     payment_method = models.CharField(max_length=50)
     payment_date = models.DateTimeField(auto_now_add=True)
-    transaction_id = models.CharField(max_length=100, blank=True)
+    transaction_id = models.CharField(max_length=100, blank=True, editable=False, default=generate_transaction_id)
 
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
     total_price = models.DecimalField(max_digits=10, decimal_places=2)

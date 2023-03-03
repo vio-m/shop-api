@@ -1,1 +1,7 @@
+env/
+media/
+static/
 **/.env
+settings.py
+vercel.json
+db.sqlite3
