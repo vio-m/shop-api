@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20eefd73-b342-42f6-971b-bcb517ac088d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_files.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shopApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopApi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fashionStore/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fashionStore/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Espadrilles-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Gladiator-Sandals-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/London_Rag_Red_Stiletto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/London_Rag_Red_Stiletto_xeDadkm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Out_Of_Space_Black_Boots_gladiator-boots.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Out_Of_Space_Black_Boots_gladiator-boots_oTBxgDU.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Over-Knee-Gladiator-Boots-Cut-out-Cage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Stiletto-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Wedges-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/adidas_brand_1200x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/brands/adidas brand 1200x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/brands/ecco_crepetray_ladies_black.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/brands/guess brand.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Ankle-Boots-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Espadrilles-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Gladiator-Sandals-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Knee-High-Boots-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Sling-Back-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Stiletto-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/categories/Wedges-Category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/default_picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ecco_crepetray_ladies_black.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/guess_brand.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Faux Suede Boots.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/London Rag Red Stiletto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/London_Rag_Red_Stiletto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Out Of Space Black Boots gladiator-boots.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Over-Knee-Gladiator-Boots-Cut-out-Cage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Red Pump Stilettos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Windsor Sultry Lace Up.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopApi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopApi/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopApi/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopApi/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

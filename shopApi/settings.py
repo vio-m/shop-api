@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_simplejwt.token_blacklist',
+    #'rest_framework_simplejwt.token_blacklist',
     "corsheaders",
     'fashionStore',
 ]
@@ -194,7 +194,7 @@ DATABASES = {
     'NAME': 'neondb',
     'USER': 'viorelmoldovan',
     'PASSWORD': '84OEUzWAHwFy',
-    'HOST': 'neonshop.ep-noisy-union-815309.us-east-2.aws.neon.tech',
+    'HOST': 'ep-noisy-union-815309.us-east-2.aws.neon.tech',
     'PORT': '5432',
   }
 }
