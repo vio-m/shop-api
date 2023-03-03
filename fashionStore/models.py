@@ -1,5 +1,4 @@
 from django.db import models
-from multiselectfield import MultiSelectField
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 
@@ -50,7 +49,7 @@ class Size(models.Model):
         ('L', 'Large'),
         ('XL', 'Extra Large'),
     )
-    size = models.CharField(max_length=3, choices=SIZE_CHOICES) #MultiSelectField(choices=SIZE_CHOICES)
+    size = models.CharField(max_length=3, choices=SIZE_CHOICES)
     def __str__(self):
         return f"Size: {self.size}"
 
